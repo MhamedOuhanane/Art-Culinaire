@@ -25,28 +25,46 @@
         </div>
     </header>
     <section>
+        <div id="Modalinscription" class="fixed w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white w-[82%] h-[90%] rounded-md  flex flex-col justify-evenly items-center">
+                <span class="text-center w-[90%]"><strong>Veuillez entrer vos informations de inscription pour accéder à votre compte :</strong></span>
+                <form action="index.php" method="post" class="flex flex-wrap justify-center md:justify-start px-[2vw] md:px-[5vw] place-content-evenly gap-y-[2vh]">
+
+                    <label class="md:w-[40%]"  for="#username">Nom d'utilisateur</label>
+                    <input id="username" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="username" type="text" placeholder="Non d'utilisateur">
+
+                    <label class="md:w-[40%]"  for="#emailinscription">Email</label>
+                    <input id="emailinscription" class="w-[45%] md:w-[50%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailinscription" type="email" placeholder="exemple@gmail.com">
+                    
+                    <label class="md:w-[40%]" for="#téléphone">Téléphone</label>
+                    <input id="téléphone" class="w-[45%] md:w-[50%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="téléphone" type="tel" placeholder="Téléphone">
+                    
+                    <label class="md:w-[40%]" for="#passwordinscription">Mot de passe</label>
+                    <input id="passwordinscription" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordinscription" type="password" placeholder="********">
+                    
+                    <label class="md:w-[40%]" for="#cof-password-inscription">Confirmer le mot de passe</label>
+                    <input id="cof-password-inscription" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="cof-password-inscription" type="password" placeholder="********">
+                    
+                    <label class="md:w-[40%]" for="#user-image">image source <span class="opacity-40">(optionnel)</span></label>
+                    <input id="user-image" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="user-image" type="password" placeholder="https://www.example.com/images/username.png">
+                    
+                    <input id="conferme" class="bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] mr-3 mt-3" name="submit" type="submit" value="Conferme">
+                </form>
+            </div>
+        </div>
+
         <div id="Modalconnexion" class="fixed w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
             <div class="bg-white w-[82%] h-[65%] md:w-[60%] md:h-[55%] rounded-md  flex flex-col justify-evenly items-center">
                 <span class="text-center w-[90%]"><strong>Veuillez entrer vos informations de connexion pour accéder à votre compte :</strong></span>
                 <form action="index.php" method="post" class="flex flex-wrap justify-center md:justify-end px-[2vw] md:px-[5vw] place-content-evenly gap-y-[2vh]">
-                <label class="md:w-[40%]"  for="#emailconnexion">Email</label>
-                <input id="emailconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailconnexion" type="email" placeholder="exemple@gmail.com" required>
-                <label class="md:w-[40%]" for="#passwordconnexion">Mot de passe</label>
-                <input id="passwordconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordconnexion" type="password" min="8" placeholder="********" required>
-                <input id="conferme" class="bg-blue-600 text-white px-3 py-1 rounded-[3px] mt-4" name="submit" type="submit" value="Conferme">
-            </form>
+                    <label class="md:w-[40%]"  for="#emailconnexion">Email</label>
+                    <input id="emailconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailconnexion" type="email" placeholder="exemple@gmail.com">
+                    <label class="md:w-[40%]" for="#passwordconnexion">Mot de passe</label>
+                    <input id="passwordconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordconnexion" type="password" placeholder="********">
+                    <input id="conferme" class="bg-blue-600 text-white px-3 py-1 rounded-[3px] mt-4" name="submit" type="submit" value="Conferme">
+                </form>
             </div>
         </div>
-        <!-- <div id="Modalinscription" class="fixed w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-            <form action="index.php" method="post" class="bg-white w-[60%] h-[50vh] rounded-md flex flex-wrap justify-center md:justify-end px-[2vw] md:px-[5vw] place-content-center gap-y-[2vh]">
-                
-                <label class="md:w-[40%]"  for="#emailconnexion">Email</label>
-                <input id="emailconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailconnexion" type="email" placeholder="exemple@gmail.com" required>
-                <label class="md:w-[40%]" for="#passwordconnexion">Mot de passe</label>
-                <input id="passwordconnexion" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordconnexion" type="password" min="8" placeholder="********" required>
-                <input id="conferme" class="bg-blue-600 px-2 py-1 rounded-[3px] mt-4" name="submit" type="submit" value="Conferme">
-            </form>
-        </div> -->
 
     </section>
 </body>
