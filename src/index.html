@@ -26,27 +26,21 @@
     </header>
     <section>
         <div id="Modalinscription" class="fixed w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-            <div class="bg-white w-[82%] h-[90%] rounded-md  flex flex-col justify-evenly items-center">
+            <div class="bg-white w-[82%] h-[90%] md:w-[70%] md:h-[65%] rounded-md  flex flex-col justify-evenly items-center">
                 <span class="text-center w-[90%]"><strong>Veuillez entrer vos informations de inscription pour accéder à votre compte :</strong></span>
-                <form action="index.php" method="post" class="flex flex-wrap justify-center md:justify-start px-[2vw] md:px-[5vw] place-content-evenly gap-y-[2vh]">
+                <form action="index.php" method="post" class="grid grid-cols-2 grid-rows-4 md:px-[5vw] place-content-evenly gap-y-[2vh]">
 
-                    <label class="md:w-[40%]"  for="#username">Nom d'utilisateur</label>
-                    <input id="username" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="username" type="text" placeholder="Non d'utilisateur">
+                    <input id="username" class="col-span-1 row-span-1  h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="username" type="text" placeholder="Non d'utilisateur">
 
-                    <label class="md:w-[40%]"  for="#emailinscription">Email</label>
-                    <input id="emailinscription" class="w-[45%] md:w-[50%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailinscription" type="email" placeholder="exemple@gmail.com">
+                    <input id="emailinscription" class=" md: h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailinscription" type="email" placeholder="Adress">
                     
-                    <label class="md:w-[40%]" for="#téléphone">Téléphone</label>
-                    <input id="téléphone" class="w-[45%] md:w-[50%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="téléphone" type="tel" placeholder="Téléphone">
+                    <input id="téléphone" class=" md: h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="téléphone" type="tel" placeholder="Téléphone">
                     
-                    <label class="md:w-[40%]" for="#passwordinscription">Mot de passe</label>
-                    <input id="passwordinscription" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordinscription" type="password" placeholder="********">
+                    <input id="passwordinscription" class=" md: h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordinscription" type="password" placeholder="Mot de passe">
                     
-                    <label class="md:w-[40%]" for="#cof-password-inscription">Confirmer le mot de passe</label>
-                    <input id="cof-password-inscription" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="cof-password-inscription" type="password" placeholder="********">
+                    <input id="cof-password-inscription" class=" md: h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="cof-password-inscription" type="password" placeholder="Confirmer le mot de passe">
                     
-                    <label class="md:w-[40%]" for="#user-image">image source <span class="opacity-40">(optionnel)</span></label>
-                    <input id="user-image" class="w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="user-image" type="password" placeholder="https://www.example.com/images/username.png">
+                    <input id="user-image" class=" md: h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="user-image" type="password" placeholder="Image source">
                     
                     <input id="conferme" class="bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] mr-3 mt-3" name="submit" type="submit" value="Conferme">
                 </form>
