@@ -2,3 +2,7 @@
     background: url("../images/sous-menu.png") no-repeat;
     background-size: contain;
 }
+
+.ContinairePlats::-webkit-scrollbar{
+    display: none;
+}

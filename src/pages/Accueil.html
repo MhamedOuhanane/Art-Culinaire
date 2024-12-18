@@ -41,7 +41,7 @@
             <a class="w-[50%] md:w-[80%]">
                 <button id="Menubtn" class="bg-none w-full h-[2.6rem] border-solid border-b-[1px] border-black flex items-center gap-[1vw] pl-[10vw] md:pl-[1.5vw]">
                     <img class="h-[100%]" src="../assets/images/logo-menu.png" alt="logo des Menus">
-                    <span class="hover:scale-110">Munus</span>
+                    <span class="hover:scale-110">Menus</span>
                 </button>
             </a>
             
@@ -75,6 +75,34 @@
                 <img class="w-full" src="../assets/images/image-chef.png" alt="icone chefs">
                 <span class="text-sm md:text-lg">Gordon Ramsay</span>
             </div>
+        </div>
+
+        <!-- continaire des Menus -->
+        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-wrap justify-center p-[1vw] overflow-y-auto">
+            <!-- Menu -->
+            <div class="relative sous-Menu w-[12rem] h-[18rem] md:w-[17rem] md:h-[24rem] flex flex-col justify-center items-center px-[0.5%] text-white">
+                <span class="absolute top-[8%] left-[36%] text-sm md:text-lg font-bold">Menu 1</span>
+                
+                <!-- continaire des Plats -->
+                <div class="ContinairePlats absolute left-[6.1%] w-[87%] md:w-[80%] h-[63%] flex flex-col items-center gap-y-[2%] overflow-y-auto py-[3.5%]">
+                    <div class="plat bg-white bg-opacity-70 w-full h-[4.5rem] md:h-[5.5rem] rounded-md flex gap-y-1">
+                        <div class="w-[40%] flex place-content-center">
+                            <img class="h-[100%] col-span-1" src="../assets/images/deser.jpg" alt="">
+                        </div>
+                        <div class="w-[60%] py-[3%] justify-center  text-black">
+                            <span class="text-sm font-bold md:text-lg">Deser</span>
+                            <p class="text-[0.3rem] md:text-[0.4rem]">Un désert est un endroit très sec avec peu de pluie et peu de vie. Il y a souvent du sable ou des roches.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="absolute w-full max-h-[8%] flex justify-around items-center bottom-[9%] px-[15%]">
+                    <span class="text-sm md:text-lg font-bold mb-[3%]">20.00$</span>
+                    <button>
+                        <img class="h-full" src="../assets/images/commande.png" alt="icone de commande">
+                    </button>
+                </div>
+            </div>            
         </div>
         
     </section>
