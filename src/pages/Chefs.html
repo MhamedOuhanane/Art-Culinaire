@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link 
         rel="shortcut icon"
-        href="../assets/images/logo-Art-Culinaire.png"
+        href="../assets/images/logo-Art1.png"
         type="image/x-icon"
     >
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -49,43 +49,64 @@
                 </button>
             </a>
 
-            <div class="sitatuschaf w-[50%] md:w-[80%] border-b-[1px] border-black flex flex-col justify-center overflow-y-auto">
+            <div class="sitatuschaf w-[50%] md:w-[80%] h-auto border-b-[1px] border-black flex flex-col justify-center">
                 <button id="Reservebtn" class="bg-none w-full h-[2.5rem] flex items-center gap-[2vw] pl-[10vw] md:pl-[1.5vw]">
                     <img class="h-[70%]" src="../assets/images/Statistique-logo.png" alt="logo des Réservation">
                     <span class="hover:scale-110">Statistiques</span>
                 </button>
+                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center">
+                    <span class="text-center">Demandes en attente</span>
+                    <span>100</span>
+                </div>
+                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
+                    <span class="text-center">Demandes approuvées pour la journée</span>
+                    <span>100</span>
+                </div>
+                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
+                    <span class="text-center">Demandes approuvées pour le jour suivant</span>
+                    <span>100</span>
+                </div>
             </div>
 
         </nav>
 
         <!-- continaire des Menus -->
-        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-wrap justify-center p-[1vw] overflow-y-auto">
-            <!-- Menu -->
-            <div class="relative sous-Menu w-[12rem] h-[18rem] md:w-[17rem] md:h-[24rem] flex flex-col justify-center items-center px-[0.5%] text-white hover:scale-[1.01]">
-                <span class="absolute top-[8%] left-[36%] text-sm md:text-lg font-bold">Menu 1</span>
-                
-                <!-- continaire des Plats -->
-                <div class="ContinairePlats absolute left-[6.1%] w-[87%] md:w-[80%] h-[63%] flex flex-col items-center gap-y-[2%] overflow-y-auto py-[3.5%]">
-                    <div class="plat bg-white bg-opacity-70 w-full h-[4.5rem] md:h-[5.5rem] rounded-md flex gap-y-1 hover:scale-[1.01]">
-                        <div class="w-[40%] flex place-content-center">
-                            <img class="h-[100%] col-span-1" src="../assets/images/deser.jpg" alt="">
-                        </div>
-                        <div class="w-[60%] py-[3%] justify-center  text-black">
-                            <span class="text-sm font-bold md:text-lg">Deser</span>
-                            <p class="text-[0.3rem] md:text-[0.4rem]">Un désert est un endroit très sec avec peu de pluie et peu de vie. Il y a souvent du sable ou des roches.</p>
+        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center  text-white hidden">
+            <div class="w-[85%] h-[2.5rem] flex justify-center md:justify-end items-center">
+                <button id="AjouterMenu" class="hover:scale-[1.01] hover:text-blue-200">Ajouter un Menu</button>
+            </div>
+            <div class="w-full h-full flex flex-wrap justify-center p-[1vw] overflow-y-auto">
+                <!-- Menu -->
+                <div class="relative sous-Menu w-[12rem] h-[18rem] md:w-[17rem] md:h-[24rem] flex flex-col justify-center items-center px-[0.5%] hover:scale-[1.01]">
+                    <span class="absolute top-[8%] left-[36%] text-sm md:text-lg font-bold">Menu 1</span>
+                    
+                    <!-- continaire des Plats -->
+                    <div class="ContinairePlats absolute left-[6.1%] w-[87%] md:w-[80%] h-[63%] flex flex-col items-center gap-y-[2%] overflow-y-auto py-[3.5%]">
+                        <div class="plat bg-white bg-opacity-70 w-full h-[4.5rem] md:h-[5.5rem] rounded-md flex gap-y-1 hover:scale-[1.01]">
+                            <div class="w-[40%] flex place-content-center">
+                                <img class="h-[100%] col-span-1" src="../assets/images/deser.jpg" alt="">
+                            </div>
+                            <div class="w-[60%] py-[3%] justify-center  text-black">
+                                <span class="text-sm font-bold md:text-lg">Deser</span>
+                                <p class="text-[0.3rem] md:text-[0.4rem]">Un désert est un endroit très sec avec peu de pluie et peu de vie. Il y a souvent du sable ou des roches.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    
-                <div class="absolute w-full max-h-[8%] flex justify-between items-center bottom-[9%] px-[15%]  pb-5">
-                    <span class="text-sm md:text-lg font-bold mb-[3%]">20.00$</span>
-                    <button id="réserve" class="h-full">
-                        <img class="w-[50%]" src="../assets/images/plus.webp" alt="icone de commande">
-                    </button>
-                </div>
-            </div>            
+                        
+                    <div class="absolute w-full max-h-[8%] flex justify-around items-center bottom-[10%] px-[15%]">
+                        <span class="text-sm md:text-lg font-bold mb-[3%]">20.00$</span>
+                        <button id="réserve" class="w-[20%] h-full self-end">
+                            <img class="w-full" src="../assets/images/plus1.png" alt="icone de commande">
+                        </button>
+                    </div>
+                </div>            
+            </div>
         </div>
-    
+
+        <!-- continaire des Réservation -->
+        <div class="Réservecontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center  text-white">
+            
+        </div>
     </section>
 
 </body>
