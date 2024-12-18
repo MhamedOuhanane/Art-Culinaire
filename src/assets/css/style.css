@@ -3,6 +3,7 @@
     background-size: contain;
 }
 
-.ContinairePlats::-webkit-scrollbar{
+.ContinairePlats::-webkit-scrollbar,
+.sitatuschaf::-webkit-scrollbar{
     display: none;
 }
