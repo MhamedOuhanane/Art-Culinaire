@@ -28,7 +28,7 @@
             </button>
         </div>
     </header>
-    <section class="w-full h-full md:h-[100vh] bg-slate-500 pt-[4.5rem] flex flex-wrap">
+    <section class="Accueil w-full h-full md:h-[100vh] bg-slate-500 pt-[4.5rem] flex flex-wrap">
         <!-- liste -->
         <div class="bg-slate-200 w-full h-auto md:w-[25%] md:h-full flex flex-col items-center ">
             <a class="w-[50%] md:w-[80%]">
@@ -78,7 +78,7 @@
         </div>
 
         <!-- continaire des Menus -->
-        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-wrap justify-center p-[1vw] overflow-y-auto">
+        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-wrap justify-center p-[1vw] overflow-y-auto hidden">
             <!-- Menu -->
             <div class="relative sous-Menu w-[12rem] h-[18rem] md:w-[17rem] md:h-[24rem] flex flex-col justify-center items-center px-[0.5%] text-white">
                 <span class="absolute top-[8%] left-[36%] text-sm md:text-lg font-bold">Menu 1</span>
@@ -98,13 +98,39 @@
                     
                 <div class="absolute w-full max-h-[8%] flex justify-around items-center bottom-[9%] px-[15%]">
                     <span class="text-sm md:text-lg font-bold mb-[3%]">20.00$</span>
-                    <button>
+                    <button id="réserve" class="h-full">
                         <img class="h-full" src="../assets/images/commande.png" alt="icone de commande">
                     </button>
                 </div>
             </div>            
         </div>
+        <!-- Modal de réservation -->
+        <div id="Modalréserve" class="fixed z-30 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
+            <div class="bg-white w-[82%] h-[65%] md:w-[60%] md:h-[55%] rounded-md  flex flex-col justify-evenly items-start">
+                <span class="text-center w-[90%]"><strong>Veuillez remplir la date de réservation.</strong></span>
+                <form action="Accueil.html" method="post" class="w-full h-[80%] grid justify-center md:grid-cols-2 md:grid-rows-3 md:justify-items-center px-5 gap-5">
+
+                    <input class="col-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="reservechef" type="text" value="Chef" disabled>
+
+                    <input class="col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="reservemenu" type="text" value="Menu" disabled>
+
+                    <input class="col-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="reservetime" type="time" placeholder="Time">
+
+                    <input class="col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="reservedate" type="date" placeholder="Date">
+                    
+                    <div class="w-full col-span-2 flex flex-col justify-start md:justify-end md:flex-row gap-2">
+                        <input id="AnnuleReservation" class="col-span-2  bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px]" type="button" value="Annuler">
+                        <input id="confermeReserve" class="col-span-2  bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] " name="submitreserve" type="submit" value="Réserve">
+                    </div>
+                </form>
+            </div>
+        </div>
         
+        <!-- continaire des reservation -->
+        <div class="Réservation w-full h-[70vh] md:w-[75%] md:h-full">
+
+        </div>
     </section>
+    
 </body>
 </html>
