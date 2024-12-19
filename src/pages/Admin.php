@@ -16,7 +16,7 @@
 <body>
     <!-- header -->
     <header class="fixed z-30 bg-gray-700 bg-opacity-80 w-full h-[4.5rem] flex justify-between items-center px-6">
-        <a class="h-full cursor-pointer hover:scale-[1.03]" href="../index.html">
+        <a class="h-full cursor-pointer hover:scale-[1.03]" href="../index.php">
             <img class="h-full md:hidden" src="../assets/images/Art Culinaire logo-Mobile.png" alt="">
             <img class="h-full hidden md:block" src="../assets/images/Art Culinaire logo-Descktop.png" alt="">
         </a>

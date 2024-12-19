@@ -16,7 +16,7 @@
 <body>
     <!-- header -->
     <header class="fixed z-30 bg-gray-700 bg-opacity-80 w-full h-[4.5rem] flex justify-between items-center px-6">
-        <a class="h-full cursor-pointer hover:scale-[1.03]" href="../index.html">
+        <a class="h-full cursor-pointer hover:scale-[1.03]" href="../index.php">
             <img class="h-full md:hidden" src="../assets/images/Art Culinaire logo-Mobile.png" alt="">
             <img class="h-full hidden md:block" src="../assets/images/Art Culinaire logo-Descktop.png" alt="">
         </a>
@@ -54,8 +54,8 @@
         </nav>
 
         <!-- continaire des chefs -->
-        <div class="Chefscontinaire w-full h-full md:w-[75%] flex flex-wrap justify-around p-[1vw] gap-y-[1.5vw] text-white overflow-y-auto">
-            <div class="chef w-[10rem] h-auto md:w-[13rem] bg-inherit flex flex-col items-center">
+        <div id="Chefscontinaire" class="w-full h-full md:w-[75%] flex flex-wrap justify-around p-[1vw] gap-y-[1.5vw] text-white overflow-y-auto">
+            <div class="chef w-[10rem] h-auto md:w-[13rem] bg-inherit flex flex-col items-center hover:scale-[1.02]">
                 <img class="w-full" src="../assets/images/image-chef.png" alt="icone chefs">
                 <span class="text-sm md:text-lg">Gordon Ramsay</span>
             </div>
@@ -109,7 +109,7 @@
         <div id="Modalréserve" class="fixed z-30 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
             <div class="bg-white w-[82%] h-[65%] md:w-[60%] md:h-[55%] rounded-md  flex flex-col justify-evenly items-start">
                 <span class="text-center w-[90%]"><strong>Veuillez remplir la date de réservation.</strong></span>
-                <form action="Accueil.html" method="post" class="w-full h-[80%] grid justify-center md:grid-cols-2 md:grid-rows-3 md:justify-items-center px-5 gap-5">
+                <form action="Accueil.php" method="post" class="w-full h-[80%] grid justify-center md:grid-cols-2 md:grid-rows-3 md:justify-items-center px-5 gap-5">
 
                     <input class="col-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="reservechef" type="text" value="Chef" disabled>
 
@@ -128,7 +128,7 @@
         </div>
         
         <!-- continaire des reservation -->
-        <div class="Réservation w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center p-[2%] hidden">
+        <div id="Reservecontinaire" class="w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center p-[2%]">
             <div class="bg-gray-200 bg-opacity-95 w-full h-[2.5rem] border-gray-500 border-[1px] grid grid-cols-[10%_20%_20%_10%_15%_10%_10%] items-center justify-items-center">
                 <span class=" font-bold">Id</span>
                 <span class="text-xs md:text-sm font-bold">Chef</span>
@@ -152,5 +152,7 @@
         </div>
     </section>
     
+    <script src="../assets/js/Accueil.js"></script>
+
 </body>
 </html>

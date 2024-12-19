@@ -1,3 +1,18 @@
+<?php
+    include("../pages/connection.php");
+
+    // l'insert des donner dans database
+    if (condition) {
+    }
+
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +30,9 @@
 <body>
     <!-- header -->
     <header class="fixed z-50 bg-gray-700 bg-opacity-80 w-full h-[4.5rem] flex justify-between px-3">
-        <a class="h-full cursor-pointer hover:scale-[1.03]" href="index.html">
-            <img class="h-full md:hidden" src="assets/images/Art Culinaire logo-Mobile.png" alt="">
-            <img class="h-full hidden md:block" src="assets/images/Art Culinaire logo-Descktop.png" alt="">
+        <a class="h-full cursor-pointer hover:scale-[1.03]" href="index.php">
+            <img class="h-full md:hidden" src="assets/images/Art-Culinaire-logo-Mobile.png" alt="">
+            <img class="h-full hidden md:block" src="assets/images/Art-Culinaire-logo-Descktop.png" alt="">
         </a>
 
         <div class="w-[50%] md:w-[30vw] flex justify-end gap-2 items-center">
@@ -47,7 +62,7 @@
                     <input id="userimage" class="col-span-2 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="user-image" type="text" placeholder="Image source">
                     <div class="w-full col-span-2 flex flex-col justify-start md:justify-end md:flex-row gap-2 mr-3 mt-3">
                         <input id="Annuler" class="col-span-2   text-red-600 md:self-end px-3 py-1 rounded-[3px]" type="button" value="Annuler">
-                        <input id="conferme" class="col-span-2  bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] " name="submit" type="submit" value="Conferme">
+                        <input id="confermeinser" class="col-span-2  bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] " name="submit" type="submit" value="Conferme">
                     </div>
                 </form>
             </div>
@@ -59,12 +74,12 @@
                 <span class="text-center w-[90%]"><strong>Veuillez entrer vos informations de connexion pour accéder à votre compte :</strong></span>
                 <form action="index.php" method="post" class="flex flex-wrap justify-center md:justify-end px-[2vw] md:px-[5vw] place-content-evenly gap-y-[2vh]">
                     <label class="md:w-[40%]"  for="#emailconnexion">Email</label>
-                    <input class="inputemail w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailconnexion" type="email" placeholder="exemple@gmail.com">
+                    <input id="emailconnexion" class="inputemail w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailconnexion" type="email" placeholder="exemple@gmail.com">
                     <label class="md:w-[40%]" for="#passwordconnexion">Mot de passe</label>
-                    <input class="inputpassword w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordconnexion" type="password" placeholder="********">
+                    <input id="passwordconnexion" class="inputpassword w-[95%] md:w-[60%] h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordconnexion" type="password" placeholder="********">
                     <div class="w-full flex justify-center md:justify-end gap-3 mt-4">
                         <input class="inscription bg-blue-400 px-3 py-1 rounded-[3px]" type="button" value="Sign in">
-                        <input id="conferme" class="bg-blue-400 px-3 py-1 rounded-[3px]" name="submit" type="submit" value="Conferme">
+                        <input id="confermeconne" class="bg-blue-400 px-3 py-1 rounded-[3px]" name="submit" type="submit" value="Conferme">
                     </div>
                 </form>
             </div>

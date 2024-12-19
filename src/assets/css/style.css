@@ -5,7 +5,10 @@
 
 .ContinairePlats::-webkit-scrollbar,
 .sitatuschaf::-webkit-scrollbar,
-.Chefscontinaire::-webkit-scrollbar{
+.Chefscontinaire::-webkit-scrollbar,
+#Reservebtn::-webkit-scrollbar,
+#Menuscontinaire::-webkit-scrollbar,
+#Chefscontinaire::-webkit-scrollbar{
     display: none;
 }
 
