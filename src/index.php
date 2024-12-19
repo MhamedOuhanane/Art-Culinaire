@@ -1,13 +1,69 @@
 <?php
-    include("../pages/connection.php");
+    include("./pages/connection.php");
 
     // l'insert des donner dans database
-    if (condition) {
-    }
+    if (isset($_POST['username'])) {
+        $password = $_POST['passwordinscription'];
+        $password = password_hash($password, PASSWORD_BCRYPT);
+        $name = $_POST['username'];
+        $Adress = $_POST['emailinscription'];
+        $telep = $_POST['téléphone'];
+        $image = $_POST['user-image'];
 
+        $verification = NULL;
+        $verification = "SELECT Adress FROM inscription WHERE Adress = ?";
+        $stmt = $con->prepare($verification);
+        $stmt->bind_param('s', $Adress);
+        $stmt->execute();
+        $verification = $stmt->get_result();
+        $verification = mysqli_fetch_assoc($verification);
 
+        if ($verification == NULL) {
+            if ($image != '') {
+                $insertuser = "INSERT INTO inscription( Username, Adress, téléphone, Password, UserImage) VALUES ('$name', '$Adress', '$telep', '$password', '$image')";
+            } else {
+                $insertuser = "INSERT INTO inscription( Username, Adress, téléphone, Password) VALUES ('$name', '$Adress', '$telep', '$password')";
+            };
+            
+            if (mysqli_query($con,$insertuser)) {
+                header("Location: ./pages/Accueil.php");
+            } else {
+                header("Location: index.php?Erreur=". mysqli_error($con));
+            };
+        } else {
+            echo '<script>location.replace("index.php?Erreur= Ce compte est déjà enregistré. Veuillez utiliser un autre identifiant.")</script>';
+        };
+    };
 
+    // le connexion
+    if (isset($_POST['emailconnexion'])) {
+        $email = $_POST['emailconnexion'];
 
+        $verification = '';
+        $verification = "SELECT * FROM inscription i, role r WHERE Adress = ? && i.id_role = r.id_Role";
+        $stmt = $con->prepare($verification);
+        $stmt ->bind_param('s', $email);
+        $stmt->execute();
+        $verification = $stmt->get_result();
+        $verification = mysqli_fetch_assoc($verification);
+        if ($verification != '') {
+            $validation = false;
+            if (password_verify($_POST['passwordconnexion'], $verification['Password'])) {
+                if ($verification['role'] == 'Admine') {
+                    header("location: ./pages/Admin.php");
+                } else if ($verification['role'] == 'Chef') {
+                    header("location: ./pages/Chefs.php");
+                } else if ($verification['role'] == 'Client') {
+                    header("location: ./pages/Accueil.php");
+                } 
+                $validation = true;
+            } else {
+                header("location: index.php?Erreur=Mot de passe incorrect. Vérifiez votre entrée et réessayez.");
+            };
+        } else {
+            header("location: index.php?Erreur=Ce compte n'existe pas. Vérifiez vos informations.");
+        }
+    };
 
 ?>
 
@@ -49,17 +105,18 @@
                 <span class="text-center w-[90%]"><strong>Veuillez entrer vos informations de inscription pour accéder à votre compte :</strong></span>
                 <form action="index.php" method="post" class="w-full h-[80%] grid justify-center md:grid-cols-[60%_30%] md:grid-rows-4 md:px-[5vw] md:justify-items-center px-5 gap-5">
 
-                    <input id="username" class="col-span-2 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="username" type="text" placeholder="Non d'utilisateur">
+                    <input id="username" class=" inputinsc col-span-2 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="username" type="text" placeholder="Non d'utilisateur">
 
-                    <input class="inputemail col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailinscription" type="email" placeholder="Adress Email">
+                    <input class="inputemail inputinsc  col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="emailinscription" type="email" placeholder="Adress Email">
                     
-                    <input id="téléphone" class="col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="téléphone" type="text" placeholder="Téléphone">
+                    <input id="téléphone" class=" inputinsc col-span-1 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="téléphone" type="text" placeholder="Téléphone">
                     
-                    <input id="passwordinscription" class="inputpassword col-span-1 w-full row-span-1 h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordinscription" type="password" placeholder="Mot de passe">
+                    <input id="passwordinscription" class="inputpassword inputinsc  col-span-1 w-full row-span-1 h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="passwordinscription" type="password" placeholder="Mot de passe">
                     
-                    <input id="cofpasswordinscription" class="col-span-1 w-full row-span-1 h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="cof-password-inscription" type="password" placeholder="Confirmer le mot de passe">
+                    <input id="cofpasswordinscription" class=" inputinsc col-span-1 w-full row-span-1 h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="cof-password-inscription" type="password" placeholder="Confirmer le mot de passe">
                     
                     <input id="userimage" class="col-span-2 row-span-1 w-full h-[2.5rem] border-solid border-2 px-2 rounded-sm" name="user-image" type="text" placeholder="Image source">
+                    
                     <div class="w-full col-span-2 flex flex-col justify-start md:justify-end md:flex-row gap-2 mr-3 mt-3">
                         <input id="Annuler" class="col-span-2   text-red-600 md:self-end px-3 py-1 rounded-[3px]" type="button" value="Annuler">
                         <input id="confermeinser" class="col-span-2  bg-blue-600 text-white md:self-end px-3 py-1 rounded-[3px] " name="submit" type="submit" value="Conferme">

@@ -117,7 +117,7 @@ cofpasswordinscription.addEventListener("input" , () => {
 
 // pour username
 username.addEventListener("input" , () => {
-    if (!/^[a-zA-Zéèêàâùûîïöäüÿç\-\s]{6,}$/.test(username.value)) {
+    if (!/^[a-zA-Z'éèêàâùûîïöäüÿç\-\s]{6,}$/.test(username.value)) {
         username.style.backgroundColor = "rgb(254 202 202)";
         validationconne = false;
         validationinsert = false;
@@ -181,22 +181,28 @@ document.querySelector("#Modalconnexion form").addEventListener("submit" , (ELEM
         };
     });
     if (validationconne == false) {
-        console.log(confermeconne);
         ELEMENT.preventDefault();
+    } else {
+        Modalconnexion.classList.add("hidden");
     };
 });
 
 // confermer l'inscription
 document.querySelector("#Modalinscription form").addEventListener("submit" , (ELEMENT) => {
-    document.querySelectorAll("#Modalinscription form input").forEach(element => {
+    document.querySelectorAll(".inputinsc").forEach(element => {
         if (element.value == '') {
             element.style.backgroundColor = "rgb(254 202 202)";
             validationinsert = false;
         };
     });
-    if (validationinsert == false) {
-        ELEMENT.preventDefault();
-    };
+    // if (validationinsert == false) {
+
+    //     ELEMENT.preventDefault();
+    // } else {
+    //     console.log(true);
+        
+        Modalinscription.classList.add("hidden");
+    // };
 });
 
 // // initialiser valeur des inputs

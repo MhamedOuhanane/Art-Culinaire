@@ -1,7 +1,7 @@
 <?php
-    $connexion = mysqli_connect("localhost", "root", "", "artculinaire");
+    $con = mysqli_connect("localhost", "root", "", "artculinaire");
     
-    if (!$connexion) {
+    if (!$con) {
         die("Connection failed: " . mysqli_connect_error());
     };
 ?>
