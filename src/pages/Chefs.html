@@ -42,36 +42,38 @@
                 </button>
             </a>
             
-            <a class="w-[50%] md:w-[80%]">
+            <a class="w-[50%] md:w-[80%] flex">
                 <button id="Reservebtn" class="bg-none w-full h-[2.5rem] border-b-[1px] border-black flex items-center gap-[1vw] pl-[10vw] md:pl-[1.5vw]">
                     <img class="h-[100%]" src="../assets/images/Réservation-logo.png" alt="logo des Réservation">
                     <span class="hover:scale-110">Réservation</span>
                 </button>
             </a>
 
-            <div class="sitatuschaf w-[50%] md:w-[80%] h-auto border-b-[1px] border-black flex flex-col justify-center">
-                <button id="Reservebtn" class="bg-none w-full h-[2.5rem] flex items-center gap-[2vw] pl-[10vw] md:pl-[1.5vw]">
+            <div class="sitatuschaf w-full md:w-[80%] h-[2.5rem] border-b-[1px] border-black flex flex-col justify-center p-2">
+                <button id="Reservebtn" class="bg-none w-[80%] h-[2.5rem] flex justify-center items-center gap-[2vw] pl-[10vw] md:pl-[1.5vw]">
                     <img class="h-[70%]" src="../assets/images/Statistique-logo.png" alt="logo des Réservation">
                     <span class="hover:scale-110">Statistiques</span>
                 </button>
-                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center">
-                    <span class="text-center">Demandes en attente</span>
-                    <span>100</span>
-                </div>
-                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
-                    <span class="text-center">Demandes approuvées pour la journée</span>
-                    <span>100</span>
-                </div>
-                <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
-                    <span class="text-center">Demandes approuvées pour le jour suivant</span>
-                    <span>100</span>
+                <div class="w-full h-full flex flex-wrap gap-y-[5%] p-2 overflow-y-auto">
+                    <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center">
+                        <span class="text-sm md:text-[1.3vw] text-center">Demandes en attente</span>
+                        <span>100</span>
+                    </div>
+                    <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
+                        <span class="text-sm md:text-[1.3vw] text-center">Demandes approuvées pour la journée</span>
+                        <span>100</span>
+                    </div>
+                    <div class="bg-white w-full h-[5rem] rounded-md flex flex-col justify-evenly items-center gap-1">
+                        <span class="text-sm md:text-[1.3vw] text-center">Demandes approuvées pour le jour suivant</span>
+                        <span>100</span>
+                    </div>
                 </div>
             </div>
 
         </nav>
 
         <!-- continaire des Menus -->
-        <div class="Menuscontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center  text-white hidden">
+        <div id="Menuscontinaire " class="w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center  text-white hidden">
             <div class="w-[85%] h-[2.5rem] flex justify-center md:justify-end items-center">
                 <button id="AjouterMenu" class="hover:scale-[1.01] hover:text-blue-200">Ajouter un Menu</button>
             </div>
@@ -104,8 +106,22 @@
         </div>
 
         <!-- continaire des Réservation -->
-        <div class="Réservecontinaire w-full h-[70vh] md:w-[75%] md:h-full flex flex-col items-center  text-white">
-            
+        <div id="Reservecontinaire" class="w-full h-[70vh] md:w-[75%] md:h-full flex justify-around gap-5 p-[2vw] overflow-y-auto">
+
+            <div class="relative Resetvation  w-[10rem] h-[12rem] md:w-[13rem] md:h-[15.5rem] flex flex-col items-center py-[2.5%] p-[0.5%] hover:scale-[1.01]">
+                <div class="w-[98%] h-[10%] flex justify-around content-around">
+                    <span class="text-sm md:text-lg">00:00</span>
+                    <span class="text-sm md:text-lg">01/01/2025</span>
+                </div>
+                <div class="w-[98%] min-h-[70%] flex justify-around flex-col gap-[5%]">
+                    <span class="w-[95%] text-sm md:text-lg text-center font-bold">Clients</span>
+                    <span class="w-[95%] text-sm md:text-lg text-center font-bold">Menu 1</span>
+                </div>
+                <div class="w-full flex justify-evenly">
+                    <button class="w-auto bg-red-400 text-white rounded-lg py-1 px-2 text-sm md:text-lg">Sup</button>
+                    <button class="w-auto bg-green-400 text-white rounded-lg py-1 px-2 text-sm md:text-lg">Acc</button>
+                </div>
+            </div>
         </div>
     </section>
 

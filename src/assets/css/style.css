@@ -7,3 +7,9 @@
 .sitatuschaf::-webkit-scrollbar{
     display: none;
 }
+
+.Resetvation{
+    background:  url("../images/logo-reserv.png") no-repeat;
+    background-size: cover;
+
+}
